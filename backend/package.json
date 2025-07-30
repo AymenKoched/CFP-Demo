@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "author": "aymen_koched",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
@@ -22,7 +26,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2",
+    "prettier": "^2.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }

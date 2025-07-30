@@ -10,4 +10,4 @@ enum Status {
   Done = 'done',
 }
 
-export let items: Item[] = [];
+export const items: Item[] = [];

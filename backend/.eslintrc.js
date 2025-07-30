@@ -1,10 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'unused-imports', 'simple-import-sort'],
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'unused-imports',
+    'simple-import-sort',
+  ],
   extends: [
-    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   env: {
     node: true,
@@ -30,5 +33,3 @@ module.exports = {
     ],
   },
 };
-
-// i want to add the plugin to order imports

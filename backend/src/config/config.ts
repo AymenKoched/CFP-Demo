@@ -12,12 +12,10 @@ enum Environment {
   Production = 'production',
 }
 
-const DEFAULT_PORT = 3000;
-const DEFAULT_ENVIRONMENT = Environment.Development;
+export const DEFAULT_PORT = 3000;
+export const DEFAULT_ENVIRONMENT = Environment.Development;
 
-const config: Config = {
+export const config: Config = {
   port: Number(process.env.PORT) || DEFAULT_PORT,
-  environment: process.env.ENVIRONMENT as Environment || DEFAULT_ENVIRONMENT,
+  environment: (process.env.ENVIRONMENT as Environment) || DEFAULT_ENVIRONMENT,
 };
-
-export default config;
