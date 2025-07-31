@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "cfp-backend",
   "version": "1.0.0",
   "author": "aymen_koched",
   "scripts": {
@@ -7,12 +7,15 @@
     "start": "node dist/server.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
-    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "build:image": "docker build -t cfp-backend ."
   },
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "uuid": "^11.1.0",
+    "zod": "^4.0.14"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

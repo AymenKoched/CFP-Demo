@@ -5,7 +5,7 @@ export interface Item {
   status: Status;
 }
 
-enum Status {
+export enum Status {
   Pending = 'pending',
   Done = 'done',
 }
