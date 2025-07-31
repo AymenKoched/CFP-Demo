@@ -1,0 +1,11 @@
+.container {
+  @apply flex ring-offset-red-950 min-h-screen max-w-full  overflow-x-hidden lg:overflow-visible red;
+}
+
+.content {
+  @apply flex w-full flex-1 grow flex-col;
+}
+
+.wrapper {
+  @apply relative mx-auto size-full max-w-screen-2xl pt-10 px-4 pb-4;
+}

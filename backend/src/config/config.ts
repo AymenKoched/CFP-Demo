@@ -12,7 +12,7 @@ enum Environment {
   Production = 'production',
 }
 
-export const DEFAULT_PORT = 3000;
+export const DEFAULT_PORT = 4000;
 export const DEFAULT_ENVIRONMENT = Environment.Development;
 
 export const config: Config = {
