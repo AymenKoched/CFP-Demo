@@ -1,0 +1,8 @@
+{
+  "name": "cfp",
+  "author": "aymen_koched",
+  "scripts": {
+    "stack:up": "docker-compose -f ./docker-compose.yml up -d",
+    "stack:down": "docker-compose -f ./docker-compose.yml down"
+  }
+}
