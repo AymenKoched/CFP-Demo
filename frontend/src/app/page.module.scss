@@ -1,0 +1,11 @@
+.container {
+  @apply gap-4 grid grid-cols-3 mx-36;
+}
+
+.create {
+  @apply md:col-span-1 col-span-full;
+}
+
+.list {
+  @apply md:col-span-2 col-span-full;
+}

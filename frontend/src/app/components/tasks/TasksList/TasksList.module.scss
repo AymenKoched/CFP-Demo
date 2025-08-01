@@ -1,0 +1,15 @@
+.container {
+  @apply text-neutral-700 p-6;
+
+  &__title {
+    @apply mb-2 text-2xl font-bold;
+  }
+
+  &__desc {
+    @apply mb-7 text-sm text-neutral-400 flex justify-between;
+  }
+
+  &__list {
+    @apply flex flex-col gap-5 pr-3;
+  }
+}

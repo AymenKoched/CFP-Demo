@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 
 import { Item, items, Status } from '../models';
-import { createTaskRequest, updateTaskRequest } from '../requests';
+import { createTaskRequest } from '../requests';
 import { ErrorResponse, TaskResponse } from '../responses';
 import { formatZodErrors } from '../utils';
 
@@ -63,18 +63,6 @@ export const updateTask = (
     return res.status(404).json({ errorMessage: 'Task not found.' });
   }
 
-  const result = updateTaskRequest.safeParse(
-    typeof req.body === 'object' && req.body !== null ? req.body : {},
-  );
-
-  if (!result.success) {
-    return res.status(400).json({
-      errorMessage: 'Invalid task data',
-      data: formatZodErrors(result.error.issues),
-    });
-  }
-  const { status } = result.data;
-
-  task.status = status;
+  task.status = task.status === Status.Pending ? Status.Done : Status.Pending;
   res.json(task);
 };

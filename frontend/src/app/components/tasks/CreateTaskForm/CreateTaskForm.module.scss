@@ -1,0 +1,23 @@
+.container {
+  @apply w-full text-neutral-700;
+
+  .form {
+    @apply flex flex-col gap-6;
+
+    .form_group {
+      @apply flex flex-col gap-2;
+
+      &__label {
+        @apply text-lg font-medium;
+      }
+    }
+
+    &__footer {
+      @apply flex flex-col lg:flex-row justify-end pt-4 w-full gap-3 border-t border-gray-300;
+
+      &__icon {
+        @apply cursor-pointer;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .container {
-  @apply flex ring-offset-red-950 min-h-screen max-w-full  overflow-x-hidden lg:overflow-visible red;
+  @apply flex min-h-screen max-w-full bg-[#F8F8FF] overflow-x-hidden lg:overflow-visible;
 }
 
 .content {

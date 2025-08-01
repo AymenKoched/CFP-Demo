@@ -1,0 +1,11 @@
+.container {
+  @apply text-neutral-700 p-6;
+
+  &__title {
+    @apply mb-2 text-2xl font-bold;
+  }
+
+  &__form {
+    @apply py-3;
+  }
+}
